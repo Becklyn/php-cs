@@ -18,13 +18,12 @@ Usage
 ### PHPStan
 
 ```bash
-phpstan -l 4 --memory_limit 4G -c vendor/becklyn/php-cs/phpstan.neon
+php vendor/bin/phpstan -l 4 --memory_limit 4G -c vendor/becklyn/php-cs/phpstan.neon
 ```
 
 
 ### PHP CS Fixer
 
 ```bash
-wget https://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O php-cs-fixer.phar
-php php-cs-fixer.phar fix --dry-run --diff
+php vendor/bin/php-cs-fixer fix --dry-run --diff
 ```
