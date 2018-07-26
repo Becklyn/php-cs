@@ -6,7 +6,7 @@ Installation
 ------------
 
 ```bash
-composer require becklyn/php-cs 
+composer require --dev becklyn/php-cs 
 ```
 
 Now run your tools like this:
