@@ -18,7 +18,7 @@ Usage
 ### PHPStan
 
 ```bash
-php vendor/bin/phpstan -l 4 --memory_limit 4G -c vendor/becklyn/php-cs/phpstan.neon
+php vendor/bin/phpstan analyse -l 4 --memory-limit 4G -c vendor/becklyn/php-cs/phpstan.neon .
 ```
 
 
@@ -26,4 +26,27 @@ php vendor/bin/phpstan -l 4 --memory_limit 4G -c vendor/becklyn/php-cs/phpstan.n
 
 ```bash
 php vendor/bin/php-cs-fixer fix --dry-run --diff
+```
+
+
+Complete Gitlab Test Script
+---------------------------
+
+Just add the file `.gitlab-ci.yml` in the root of your project:
+
+```yaml
+kaba:
+    script:
+        - yarn
+        - composer install --no-interaction
+        - 'npx kaba --analyze'
+
+php_cs_fixer:
+    script:
+        - 'php vendor/bin/php-cs-fixer fix --dry-run --diff'
+
+phpstan:
+    script:
+        - 'php vendor/bin/phpstan analyse -l 4 --memory-limit 4G -c vendor/becklyn/php-cs/phpstan.neon .'
+
 ```
