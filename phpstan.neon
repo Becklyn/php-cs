@@ -9,8 +9,8 @@ parameters:
         container_xml_path: %rootDir%/../../../var/cache/dev/appDevDebugProjectContainer.xml
 
     excludes_analyse:
-        - %currentWorkingDirectory%/app/DoctrineMigrations
-        - %currentWorkingDirectory%/node_modules
-        - %currentWorkingDirectory%/src/Migrations
-        - %currentWorkingDirectory%/var
-        - %currentWorkingDirectory%/vendor
+        - %rootDir%/../../../app/DoctrineMigrations
+        - %rootDir%/../../../node_modules
+        - %rootDir%/../../../src/Migrations
+        - %rootDir%/../../../var
+        - %rootDir%/../../../vendor
