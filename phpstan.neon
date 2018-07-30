@@ -1,4 +1,13 @@
+includes:
+    - vendor/phpstan/phpstan-doctrine/extension.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
+    - vendor/phpstan/phpstan-symfony/extension.neon
+
 parameters:
+    symfony:
+        container_xml_path: %rootDir%/../../../var/cache/dev/appDevDebugProjectContainer.xml
+
     excludes_analyse:
         - %currentWorkingDirectory%/app/DoctrineMigrations
         - %currentWorkingDirectory%/node_modules
