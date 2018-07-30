@@ -1,8 +1,8 @@
 includes:
-    - vendor/phpstan/phpstan-doctrine/extension.neon
-    - vendor/phpstan/phpstan-phpunit/extension.neon
-    - vendor/phpstan/phpstan-phpunit/rules.neon
-    - vendor/phpstan/phpstan-symfony/extension.neon
+    - ../../phpstan/phpstan-doctrine/extension.neon
+    - ../../phpstan/phpstan-phpunit/extension.neon
+    - ../../phpstan/phpstan-phpunit/rules.neon
+    - ../../phpstan/phpstan-symfony/extension.neon
 
 parameters:
     symfony:
