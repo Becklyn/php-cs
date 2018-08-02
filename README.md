@@ -48,4 +48,8 @@ php_cs_fixer:
 phpstan:
     script:
         - 'php vendor/bin/phpstan analyse -l 4 --memory-limit 4G -c vendor/becklyn/php-cs/phpstan.neon .'
+        
+phpunit:
+    script:
+        - './vendor/bin/simple-phpunit -c phpunit.xml'
 ```
