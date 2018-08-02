@@ -43,10 +43,9 @@ kaba:
 
 php_cs_fixer:
     script:
-        - 'php vendor/bin/php-cs-fixer fix --dry-run --diff'
+        - 'php vendor/bin/php-cs-fixer fix --dry-run --diff --config vendor/becklyn/php-cs/.php_cs.dist'
 
 phpstan:
     script:
         - 'php vendor/bin/phpstan analyse -l 4 --memory-limit 4G -c vendor/becklyn/php-cs/phpstan.neon .'
-
 ```
