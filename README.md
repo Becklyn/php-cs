@@ -40,6 +40,8 @@ before_script:
 
 kaba:
     script:
+        # fixes possible `node-sass` installation issues
+        - export npm_config_unsafe_perm=true
         - yarn
         - npx kaba --analyze
 
