@@ -15,7 +15,6 @@
         "friendsofphp/php-cs-fixer": "^2.12",
         "phpstan/phpstan": "^0.10.2",
         "phpstan/phpstan-doctrine": "^0.10.0",
-        "phpstan/phpstan-phpunit": "^0.10.0",
         "phpstan/phpstan-symfony": "^0.10.0",
         "symfony/phpunit-bridge": "^4.0"
     },

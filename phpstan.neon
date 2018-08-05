@@ -1,7 +1,5 @@
 includes:
     - ../../phpstan/phpstan-doctrine/extension.neon
-    - ../../phpstan/phpstan-phpunit/extension.neon
-    - ../../phpstan/phpstan-phpunit/rules.neon
     - ../../phpstan/phpstan-symfony/extension.neon
 
 parameters:
@@ -12,5 +10,6 @@ parameters:
         - %rootDir%/../../../app/DoctrineMigrations
         - %rootDir%/../../../node_modules
         - %rootDir%/../../../src/Migrations
+        - %rootDir%/../../../tests
         - %rootDir%/../../../var
         - %rootDir%/../../../vendor
