@@ -38,6 +38,10 @@ Just add the file `.gitlab-ci.yml` in the root of your project:
 before_script:
     - composer install --no-interaction --no-progress --ansi
 
+composer_normalize:
+    script:
+        - composer normalize --dry-run
+
 kaba:
     script:
         # fixes possible `node-sass` installation issues
@@ -57,3 +61,5 @@ phpunit:
     script:
         - ./vendor/bin/simple-phpunit -c phpunit.xml --colors=always
 ```
+
+Composer normalize needs the [composer `normalize` plugin](https://packagist.org/packages/localheinz/composer-normalize).
