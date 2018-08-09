@@ -40,7 +40,7 @@ before_script:
 
 composer_normalize:
     script:
-        - composer normalize --dry-run
+        - composer normalize --indent-size 4 --indent-style space --dry-run
 
 kaba:
     script:
