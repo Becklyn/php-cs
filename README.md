@@ -44,7 +44,7 @@ composer_normalize:
 
 package_json:
     script:
-    - npx prettier-package-json package.json assets/package.json --list-different --tab-width 4
+    - npx prettier-package-json --list-different --tab-width 4
 
 kaba:
     script:
