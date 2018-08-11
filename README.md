@@ -42,6 +42,10 @@ composer_normalize:
     script:
         - composer normalize --indent-size 4 --indent-style space --dry-run
 
+package_json:
+    script:
+    - npx prettier-package-json package.json assets/package.json --list-different --tab-width 4
+
 kaba:
     script:
         # fixes possible `node-sass` installation issues
