@@ -44,7 +44,7 @@ composer_normalize:
 
 package_json:
     script:
-    - npx prettier-package-json --list-different --tab-width 4
+        - npx prettier-package-json --list-different --tab-width 4
 
 kaba:
     script:
@@ -59,7 +59,7 @@ php_cs_fixer:
 
 phpstan:
     script:
-        - 'php vendor/bin/phpstan analyse -l 4 --memory-limit 4G -c vendor/becklyn/php-cs/phpstan.neon .'
+        - php vendor/bin/phpstan analyse -l 4 --memory-limit 4G -c vendor/becklyn/php-cs/phpstan.neon .
 
 phpunit:
     script:
