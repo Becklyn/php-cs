@@ -20,7 +20,7 @@ if (3 !== count($dirs))
 
 $finder = PhpCsFixer\Finder::create()
     ->in($dirs)
-    ->exclude("vendor")
+    ->exclude(["vendor", "var", "node_modules"])
 ;
 
 return PhpCsFixer\Config::create()
