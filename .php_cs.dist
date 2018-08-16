@@ -14,7 +14,7 @@ foreach (["config", "public", "src"] as $possibleDir)
 // if no symfony project, just run everywhere.
 if (3 !== count($dirs))
 {
-    $dirs[] = ".";
+    $dirs = ["."];
 }
 
 
