@@ -4,14 +4,16 @@ $cwd = \getcwd();
 
 if (\is_dir("{$cwd}/src") && (\is_dir("{$cwd}/public") || \is_dir("{$cwd}/web")))
 {
+    $dirs = [];
+
     // this is a symfony project, so add possible symfony directories
-    $dirs = [
-        "app",
-        "config",
-        "public",
-        "src",
-        "web",
-    ];
+    foreach (["app", "config", "public", "src", "web"] as $possibleDir)
+    {
+        if (\is_dir("{$cwd}/{$possibleDir}"))
+        {
+            $dirs[] = $possibleDir;
+        }
+    }
 }
 else
 {
@@ -23,6 +25,7 @@ else
 $finder = PhpCsFixer\Finder::create()
     ->in($dirs)
     ->exclude(["vendor", "var", "node_modules"])
+    ->ignoreUnreadableDirs()
 ;
 
 return PhpCsFixer\Config::create()
