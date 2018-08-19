@@ -1,0 +1,11 @@
+includes:
+    - ../../phpstan/phpstan-doctrine/extension.neon
+
+parameters:
+    excludes_analyse:
+        - %rootDir%/../../../app/DoctrineMigrations
+        - %rootDir%/../../../node_modules
+        - %rootDir%/../../../src/Migrations
+        - %rootDir%/../../../tests
+        - %rootDir%/../../../var
+        - %rootDir%/../../../vendor
