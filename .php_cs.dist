@@ -52,8 +52,6 @@ return PhpCsFixer\Config::create()
                 "for",
                 "foreach",
                 "if",
-                "return",
-                "throw",
                 "try",
                 "while",
                 "yield",
