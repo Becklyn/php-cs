@@ -1,19 +1,7 @@
 includes:
-    - ../../phpstan/phpstan-doctrine/extension.neon
+    - phpstan_lib.neon
     - ../../phpstan/phpstan-symfony/extension.neon
 
 parameters:
     symfony:
         container_xml_path: %rootDir%/../../../var/cache/dev/appDevDebugProjectContainer.xml
-
-    excludes_analyse:
-        - %rootDir%/../../../app/DoctrineMigrations
-        - %rootDir%/../../../node_modules
-        - %rootDir%/../../../src/Migrations
-        - %rootDir%/../../../tests
-        - %rootDir%/../../../var
-        - %rootDir%/../../../vendor
-
-    ignoreErrors:
-        - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\)\.#'
-        - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface::children\(\)\.#'
