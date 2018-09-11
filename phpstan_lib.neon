@@ -9,3 +9,7 @@ parameters:
         - %rootDir%/../../../tests
         - %rootDir%/../../../var
         - %rootDir%/../../../vendor
+
+    ignoreErrors:
+        - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\)\.#'
+        - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface::children\(\)\.#'
