@@ -2,6 +2,8 @@ includes:
     - ../../phpstan/phpstan-doctrine/extension.neon
 
 parameters:
+    reportUnmatchedIgnoredErrors: false
+
     excludes_analyse:
         - %rootDir%/../../../app/DoctrineMigrations
         - %rootDir%/../../../node_modules
