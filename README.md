@@ -59,9 +59,9 @@ php_cs_fixer:
 
 phpstan:
     script:
-        - php vendor/bin/phpstan analyse -l 4 --memory-limit 4G -c vendor/becklyn/php-cs/phpstan.neon .
+        - php vendor/bin/phpstan analyse --memory-limit 4G -c vendor/becklyn/php-cs/phpstan.neon .
         # or
-        # - php vendor/bin/phpstan analyse -l 4 --memory-limit 4G -c vendor/becklyn/php-cs/phpstan_lib.neon .
+        # - php vendor/bin/phpstan analyse --memory-limit 4G -c vendor/becklyn/php-cs/phpstan_lib.neon .
 
 phpunit:
     script:
