@@ -25,7 +25,7 @@ php vendor/bin/phpstan analyse -l 4 --memory-limit 4G -c vendor/becklyn/php-cs/p
 ### PHP CS Fixer
 
 ```bash
-php vendor/bin/php-cs-fixer fix --dry-run --diff
+php vendor/bin/php-cs-fixer fix --dry-run --diff --config vendor/becklyn/php-cs/.php_cs.dist
 ```
 
 
