@@ -57,7 +57,8 @@ return PhpCsFixer\Config::create()
                 "yield",
             ],
         ],
-        // disabled, as this forces the brace on the same line, if the method arguments are over multiple lines (to be compatible with PSR-2
+        // disabled, as this forces the brace on the same line, if the method arguments are over multiple lines (to be compatible with PSR-2)
+        // see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/3637#issuecomment-409987422
 //        "braces" => [
 //            "allow_single_line_closure" => true,
 //            "position_after_anonymous_constructs" => "next",
@@ -67,7 +68,11 @@ return PhpCsFixer\Config::create()
         "cast_spaces" => [
             "space" => "single",
         ],
-        "class_attributes_separation" => true,
+        // Disabled, as we can't configure *2* blank lines to separate
+        // see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4001
+//        "class_attributes_separation" => [
+//            "elements" => ["method", "property"],
+//        ],
         "class_definition" => true,
         "combine_consecutive_issets" => true,
         "combine_consecutive_unsets" => true,
