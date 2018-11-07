@@ -55,7 +55,7 @@ kaba:
 
 php_cs_fixer:
     script:
-        - php vendor/bin/php-cs-fixer fix --dry-run --diff --config vendor/becklyn/php-cs/.php_cs.dist --no-interaction --ansi
+        - php vendor/bin/php-cs-fixer fix --diff --config vendor/becklyn/php-cs/.php_cs.dist --dry-run --no-interaction --ansi
 
 phpstan:
     script:
