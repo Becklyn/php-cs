@@ -13,9 +13,9 @@
     "require": {
         "php": "^7.1",
         "friendsofphp/php-cs-fixer": "^2.12",
-        "phpstan/phpstan": "^0.10.2",
-        "phpstan/phpstan-doctrine": "^0.10.0",
-        "phpstan/phpstan-symfony": "^0.10.0",
+        "phpstan/phpstan": "^0.11.1",
+        "phpstan/phpstan-doctrine": "^0.11",
+        "phpstan/phpstan-symfony": "^0.11",
         "symfony/phpunit-bridge": "^4.0"
     },
     "config": {
