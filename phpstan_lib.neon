@@ -15,5 +15,5 @@ parameters:
         - %rootDir%/../../../vendor
 
     ignoreErrors:
-        - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\)\.#'
-        - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface::children\(\)\.#'
+        - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::#'
+        - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface::#'
