@@ -1,12 +1,12 @@
 {
     "name": "becklyn/php-cs",
-    "description": "Config files for PHP code style",
     "type": "lib",
+    "description": "Config files for PHP code style",
     "homepage": "https://github.com/Becklyn/PHP-Code-Style",
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name":     "Becklyn Studios",
+            "name": "Becklyn Studios",
             "homepage": "http://becklyn.com/"
         }
     ],
@@ -16,9 +16,13 @@
         "phpstan/phpstan": "^0.11.5",
         "phpstan/phpstan-doctrine": "^0.11.2",
         "phpstan/phpstan-symfony": "^0.11.5",
-        "symfony/phpunit-bridge": "^4.0"
+        "symfony/phpunit-bridge": "^4.0",
+        "symfony/yaml": "^4.0"
     },
     "config": {
         "sort-packages": true
-    }
+    },
+    "bin": [
+        "bin/fix-ci"
+    ]
 }
