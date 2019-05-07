@@ -7,12 +7,12 @@ parameters:
     reportUnmatchedIgnoredErrors: false
 
     excludes_analyse:
-        - %rootDir%/../../../app/DoctrineMigrations
-        - %rootDir%/../../../node_modules
-        - %rootDir%/../../../src/Migrations
-        - %rootDir%/../../../tests
-        - %rootDir%/../../../var
-        - %rootDir%/../../../vendor
+        - %currentWorkingDirectory%/app/DoctrineMigrations
+        - %currentWorkingDirectory%/node_modules
+        - %currentWorkingDirectory%/src/Migrations
+        - %currentWorkingDirectory%/tests
+        - %currentWorkingDirectory%/var
+        - %currentWorkingDirectory%/vendor
 
     ignoreErrors:
         - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::#'

@@ -4,4 +4,4 @@ includes:
 
 parameters:
     symfony:
-        container_xml_path: %rootDir%/../../../var/cache/dev/appApp_KernelDevDebugContainer.xml
+        container_xml_path: %currentWorkingDirectory%/var/cache/dev/appApp_KernelDevDebugContainer.xml
