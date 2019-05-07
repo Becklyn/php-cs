@@ -18,13 +18,13 @@ if (\is_dir("{$cwd}/src") && (\is_dir("{$cwd}/public") || \is_dir("{$cwd}/web"))
 else
 {
     // regular library, so just lint everything
-    $dirs = ["."];
+    $dirs = ["src"];
 }
 
 
 $finder = PhpCsFixer\Finder::create()
     ->in($dirs)
-    ->exclude(["Migrations", "node_modules", "var", "vendor"])
+    ->exclude(["Migrations", "node_modules", "tests", "var", "vendor"])
     ->ignoreUnreadableDirs()
 ;
 
