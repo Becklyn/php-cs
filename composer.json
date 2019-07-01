@@ -19,8 +19,17 @@
         "symfony/phpunit-bridge": "^4.0",
         "symfony/yaml": "^4.0"
     },
+    "require-dev": {
+        "doctrine/orm": "^2.6"
+    },
+    "suggest": {
+        "doctrine/orm": "To use the SchemaValidationTest."
+    },
     "config": {
         "sort-packages": true
+    },
+    "autoload": {
+        "Becklyn\\PhpCs\\": "src"
     },
     "bin": [
         "bin/fix-ci"
