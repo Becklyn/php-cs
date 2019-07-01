@@ -51,7 +51,7 @@ Composer normalize needs the [composer `normalize` plugin](https://packagist.org
 Testing Helpers
 ---------------
 
-The bundle contains various base tests, that can be used in bundles / libraries / projects.
+The bundle contains various base tests, that can be used in bundles / libraries.
 
 
 ### Schema Validation Test
