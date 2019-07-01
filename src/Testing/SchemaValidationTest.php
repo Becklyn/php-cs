@@ -7,14 +7,17 @@ use Doctrine\ORM\Tools\SchemaValidator;
 use Doctrine\ORM\Tools\Setup;
 use PHPUnit\Framework\TestCase;
 
-abstract class SchemaValidationTest extends TestCase
+/**
+ * Validates the doctrine schema
+ */
+class SchemaValidationTest extends TestCase
 {
     private const DB_PATH = __DIR__ . "/test_db.sqlite";
 
     /**
      * @inheritDoc
      */
-    protected function tearDown ()
+    final protected function tearDown ()
     {
         if (\is_file(self::DB_PATH))
         {
@@ -25,7 +28,7 @@ abstract class SchemaValidationTest extends TestCase
     /**
      *
      */
-    public function testSchemaIsValid () : void
+    final public function testSchemaIsValid () : void
     {
         $config = Setup::createAnnotationMetadataConfiguration(
             $this->getEntityDirs(),
@@ -61,5 +64,10 @@ abstract class SchemaValidationTest extends TestCase
      *
      * @return string
      */
-    abstract protected function getRootDir () : string;
+    protected function getRootDir () : string
+    {
+        $r = new \ReflectionClass($this);
+
+        return \dirname($r->getFileName(), 2);
+    }
 }
