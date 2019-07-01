@@ -29,7 +29,9 @@
         "sort-packages": true
     },
     "autoload": {
-        "Becklyn\\PhpCs\\": "src"
+        "psr-4": {
+            "Becklyn\\PhpCs\\": "src/"
+        }
     },
     "bin": [
         "bin/fix-ci"
