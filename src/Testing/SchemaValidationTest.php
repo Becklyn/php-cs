@@ -12,19 +12,6 @@ use PHPUnit\Framework\TestCase;
  */
 class SchemaValidationTest extends TestCase
 {
-    private const DB_PATH = __DIR__ . "/test_db.sqlite";
-
-    /**
-     * @inheritDoc
-     */
-    final protected function tearDown ()
-    {
-        if (\is_file(self::DB_PATH))
-        {
-            @\unlink(self::DB_PATH);
-        }
-    }
-
     /**
      *
      */
@@ -38,8 +25,7 @@ class SchemaValidationTest extends TestCase
             false
         );
         $entityManager = EntityManager::create([
-            "driver" => "pdo_sqlite",
-            "path" => __DIR__ . "/db.sqlite",
+            "url" => "sqlite:///:memory:",
         ], $config);
         $validator = new SchemaValidator($entityManager);
         self::assertCount(0, $validator->validateMapping());
