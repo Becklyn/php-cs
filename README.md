@@ -45,3 +45,37 @@ php vendor/bin/php-cs-fixer fix --dry-run --diff --config vendor/becklyn/php-cs/
 ```
 
 Composer normalize needs the [composer `normalize` plugin](https://packagist.org/packages/localheinz/composer-normalize).
+
+
+
+Testing Helpers
+---------------
+
+The bundle contains various base tests, that can be used in bundles / libraries / projects.
+
+
+### Schema Validation Test
+
+This test receives a list of directories and tests that there are no mapping errors in doctrine annotations.
+
+#### Usage
+
+Extend it in your `tests` directory:
+
+`tests/ValidateEntitySchemaTest`:
+
+```php
+use Becklyn\PhpCs\Testing\SchemaValidationTest;
+
+class ValidateEntitySchemaTest extends SchemaValidationTest
+{
+}
+```
+
+There are two extension points:
+
+*   `getRootDir()` must return the absolute path to the root of your app. By default it assumes that your test is directly
+    in the tests directory top level. Change it, if that isn't the case.
+
+*   `getEntityDirs()` must return the list of absolute paths, where files with mapping info are stored.
+    By default set to `getRootDir()/src/Entity`.
