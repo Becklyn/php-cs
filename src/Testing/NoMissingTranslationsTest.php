@@ -17,7 +17,7 @@ class NoMissingTranslationsTest extends TestCase
         $locales = $this->getLocales();
 
         $extractor = new TranslationExtractor();
-        $required = $extractor->extract($this->getDirectoriesToExtract());
+        $required = $extractor->extract($this->getDirectoriesWithUsages());
 
         $existingTranslationLoader = new TranslationsLoader();
         $existing = $existingTranslationLoader->loadTranslations($this->getDirectoriesWithTranslations(), $locales);
@@ -50,7 +50,7 @@ class NoMissingTranslationsTest extends TestCase
      *
      * @return array
      */
-    protected function getDirectoriesToExtract () : array
+    protected function getDirectoriesWithUsages () : array
     {
         $root = \rtrim($this->getRootDir(), "/");
 
@@ -100,7 +100,6 @@ class NoMissingTranslationsTest extends TestCase
      */
     protected function getIgnoredKeys () : array
     {
-        return [
-        ];
+        return [];
     }
 }
