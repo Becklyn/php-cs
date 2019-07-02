@@ -61,18 +61,6 @@ class NoMissingTranslationsTest extends TestCase
 
 
     /**
-     * Returns the path to the root dir.
-     *
-     * @return string
-     */
-    protected function getRootDir () : string
-    {
-        $r = new \ReflectionClass($this);
-        return \dirname($r->getFileName(), 2);
-    }
-
-
-    /**
      * Returns the list of directories containing translation files.
      *
      * @return array
@@ -84,6 +72,18 @@ class NoMissingTranslationsTest extends TestCase
         return [
             "{$root}/src/Resources/translations",
         ];
+    }
+
+
+    /**
+     * Returns the path to the root dir.
+     *
+     * @return string
+     */
+    protected function getRootDir () : string
+    {
+        $r = new \ReflectionClass($this);
+        return \dirname($r->getFileName(), 2);
     }
 
 
