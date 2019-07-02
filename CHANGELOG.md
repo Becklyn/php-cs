@@ -2,6 +2,7 @@
 =====
 
 *   Add `NoMissingTranslationsTest`.
+*   The `SchemaValidationTest` will now print the violations in PHPUnit to ease debugability.
 
 
 1.3.0

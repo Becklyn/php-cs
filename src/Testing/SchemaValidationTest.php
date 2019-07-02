@@ -28,7 +28,10 @@ class SchemaValidationTest extends TestCase
             "url" => "sqlite:///:memory:",
         ], $config);
         $validator = new SchemaValidator($entityManager);
-        self::assertCount(0, $validator->validateMapping());
+        $issues = $validator->validateMapping();
+
+        $log = \json_encode($issues, \JSON_PRETTY_PRINT);
+        self::assertEmpty($issues, "Mapping errors should be empty, received:\n{$log}");
     }
 
 
