@@ -2,9 +2,9 @@
 
 namespace Becklyn\PhpCs\Translations;
 
-
 use Becklyn\PhpCs\Translations\Integration\NameResolverIntegration;
 use Becklyn\PhpCs\Translations\Visitor\BackendTranslatorVisitor;
+use Becklyn\PhpCs\Translations\Visitor\CallbackValidationVisitor;
 use Becklyn\PhpCs\Translations\Visitor\ClassValidationVisitor;
 use Becklyn\PhpCs\Translations\Visitor\PropertyValidationVisitor;
 use Symfony\Component\Finder\Finder;
@@ -101,6 +101,7 @@ class TranslationExtractor
 
         // add remaining visitors
         $fileExtractor->addVisitor(new BackendTranslatorVisitor());
+        $fileExtractor->addVisitor(new CallbackValidationVisitor());
         $fileExtractor->addVisitor(new ClassValidationVisitor());
         $fileExtractor->addVisitor(new ContainerAwareTrans());
         $fileExtractor->addVisitor(new ContainerAwareTransChoice());
