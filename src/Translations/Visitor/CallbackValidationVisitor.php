@@ -72,7 +72,7 @@ class CallbackValidationVisitor extends AbstractVisitor
      */
     private function handleClassLike (ClassLike $node) : void
     {
-        $this->classStack[] =  \property_exists($node, "namespacedName")
+        $this->classStack[] = \property_exists($node, "namespacedName")
             ? (string) $node->namespacedName
             : (string) $node->name;
     }
