@@ -86,6 +86,18 @@ There are two extension points:
 
 This tests checks that there are no translations used, that are missing in the library.
 
+Translations will be extracted from:
+
+*   Validation constraint annotations in entities (on the class itself and its properties)
+*   Form field options in `AbstractType`s
+*   Usages of the `BackendTranslator` (Mayd-specific)
+*   Usages of `ExecutionContext(Interface)` in `@Callback` methods
+*   Symfony: `$this->get('translator')->trans('foobar')` in controllers
+*   Symfony: `$this->get('translator')->transChoice('foobar')` in controllers
+*   Symfony: `$this->addFlash()` and `$this->getFlashBag()->add()` in controllers
+*   Symfony: Form type choices
+
+
 #### Usage
 
 Extend it in your `tests` directory:
