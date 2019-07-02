@@ -4,6 +4,9 @@ namespace Becklyn\PhpCs\Translations\Visitor;
 
 use PhpParser\Node;
 
+/**
+ * Searches for calls using the backend translator
+ */
 class BackendTranslatorVisitor extends AbstractVisitor
 {
     /**

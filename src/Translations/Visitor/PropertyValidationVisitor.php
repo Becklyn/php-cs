@@ -8,6 +8,9 @@ use PhpParser\Node;
 use PhpParser\Node\Stmt\ClassLike;
 use PhpParser\Node\Stmt\Property;
 
+/**
+ * Searches for constraints that are placed on a property.
+ */
 class PropertyValidationVisitor extends AbstractVisitor
 {
     /**

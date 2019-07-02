@@ -6,6 +6,9 @@ use Becklyn\PhpCs\Translations\Constraint\ConstraintMessageExtractor;
 use Doctrine\Common\Annotations\AnnotationReader;
 use PhpParser\Node;
 
+/**
+ * Searches for constraints that are placed on a class.
+ */
 class ClassValidationVisitor extends AbstractVisitor
 {
     /**
