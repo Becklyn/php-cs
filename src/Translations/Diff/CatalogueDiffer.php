@@ -36,12 +36,23 @@ class CatalogueDiffer
 
                     if (!isset($existingTranslations[$locale][$domain][$key]))
                     {
-                        $missing[] = "{$locale}:{$domain}:{$key}";
+                        $missing[$locale][$domain][] = $key;
                     }
                 }
+
+                if (isset($missing[$locale][$domain]))
+                {
+                    \usort($missing[$locale][$domain], "strnatcasecmp");
+                }
+            }
+
+            if (isset($missing[$locale]))
+            {
+                \uksort($missing[$locale], "strnatcasecmp");
             }
         }
 
+        \uksort($missing, "strnatcasecmp");
         return $missing;
     }
 

@@ -30,7 +30,8 @@ class NoMissingTranslationsTest extends TestCase
             $this->getIgnoredKeys()
         );
 
-        self::assertEquals([], $missing, "Ensure that there are no missing translations");
+        $log = \json_encode($missing, \JSON_PRETTY_PRINT);
+        self::assertEmpty($missing, "Ensure that there are no missing translations, missing are:\n{$log}");
     }
 
 
