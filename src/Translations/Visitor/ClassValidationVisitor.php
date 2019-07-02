@@ -4,7 +4,6 @@ namespace Becklyn\PhpCs\Translations\Visitor;
 
 use Becklyn\PhpCs\Translations\Constraint\ConstraintMessageExtractor;
 use Doctrine\Common\Annotations\AnnotationReader;
-use Doctrine\Common\Annotations\IndexedReader;
 use PhpParser\Node;
 
 class ClassValidationVisitor extends AbstractVisitor
@@ -26,7 +25,7 @@ class ClassValidationVisitor extends AbstractVisitor
      */
     public function __construct ()
     {
-        $this->reader = new IndexedReader(new AnnotationReader());
+        $this->reader = new AnnotationReader();
         $this->constraintMessageExtractor = new ConstraintMessageExtractor();
     }
 

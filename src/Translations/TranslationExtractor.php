@@ -6,6 +6,7 @@ namespace Becklyn\PhpCs\Translations;
 use Becklyn\PhpCs\Translations\Integration\NameResolverIntegration;
 use Becklyn\PhpCs\Translations\Visitor\BackendTranslatorVisitor;
 use Becklyn\PhpCs\Translations\Visitor\ClassValidationVisitor;
+use Becklyn\PhpCs\Translations\Visitor\PropertyValidationVisitor;
 use Symfony\Component\Finder\Finder;
 use Translation\Extractor\Extractor;
 use Translation\Extractor\FileExtractor\FileExtractor;
@@ -105,6 +106,7 @@ class TranslationExtractor
         $fileExtractor->addVisitor(new ContainerAwareTransChoice());
         $fileExtractor->addVisitor(new FlashMessage());
         $fileExtractor->addVisitor(new FormTypeChoices());
+        $fileExtractor->addVisitor(new PropertyValidationVisitor());
 
         return $fileExtractor;
     }
