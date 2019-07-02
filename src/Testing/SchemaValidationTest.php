@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 class SchemaValidationTest extends TestCase
 {
     /**
-     *
+     * Tests that the Doctrine schema is valid
      */
     final public function testSchemaIsValid () : void
     {
@@ -53,7 +53,6 @@ class SchemaValidationTest extends TestCase
     protected function getRootDir () : string
     {
         $r = new \ReflectionClass($this);
-
         return \dirname($r->getFileName(), 2);
     }
 }
