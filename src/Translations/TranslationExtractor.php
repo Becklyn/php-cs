@@ -6,6 +6,7 @@ use Becklyn\PhpCs\Translations\Integration\NameResolverIntegration;
 use Becklyn\PhpCs\Translations\Visitor\BackendTranslatorVisitor;
 use Becklyn\PhpCs\Translations\Visitor\CallbackValidationVisitor;
 use Becklyn\PhpCs\Translations\Visitor\ClassValidationVisitor;
+use Becklyn\PhpCs\Translations\Visitor\CustomConstraintDefaultMessagesVisitor;
 use Becklyn\PhpCs\Translations\Visitor\FormOptionLabelsVisitor;
 use Becklyn\PhpCs\Translations\Visitor\PropertyValidationVisitor;
 use Symfony\Component\Finder\Finder;
@@ -107,6 +108,7 @@ class TranslationExtractor
         $fileExtractor->addVisitor(new ClassValidationVisitor());
         $fileExtractor->addVisitor(new ContainerAwareTrans());
         $fileExtractor->addVisitor(new ContainerAwareTransChoice());
+        $fileExtractor->addVisitor(new CustomConstraintDefaultMessagesVisitor());
         $fileExtractor->addVisitor(new FlashMessage());
         $fileExtractor->addVisitor(new FormOptionLabelsVisitor());
         $fileExtractor->addVisitor(new FormTypeChoices());
