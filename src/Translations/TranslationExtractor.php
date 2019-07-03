@@ -19,6 +19,7 @@ use Translation\Extractor\Visitor\Php\Symfony\ContainerAwareTrans;
 use Translation\Extractor\Visitor\Php\Symfony\ContainerAwareTransChoice;
 use Translation\Extractor\Visitor\Php\Symfony\FlashMessage;
 use Translation\Extractor\Visitor\Php\Symfony\FormTypeChoices;
+use Translation\Extractor\Visitor\Twig\TwigVisitorFactory;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
@@ -124,7 +125,12 @@ class TranslationExtractor
     {
         $loader = new FilesystemLoader($dirs);
         $twig = new Environment($loader);
-        return new TwigFileExtractor($twig);
+        $fileExtractor = new TwigFileExtractor($twig);
+
+        // add visitors
+        $fileExtractor->addVisitor(TwigVisitorFactory::create());
+
+        return $fileExtractor;
     }
 
 
