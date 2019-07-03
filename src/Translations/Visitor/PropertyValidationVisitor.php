@@ -62,23 +62,22 @@ class PropertyValidationVisitor extends AbstractVisitor
             return;
         }
 
-        if (count($node->props) !== 1)
-        {
-            throw new \Exception("Can't parse prop with multiple propertyproperties.");
-        }
-
-        $name = (string) $node->props[0]->name;
         $class = \end($this->classStack);
-        $annotations = $this->reader->getPropertyAnnotations(new \ReflectionProperty($class, $name));
 
-        foreach ($this->constraintMessageExtractor->extractMessages($annotations) as $message)
+        foreach ($node->props as $prop)
         {
-            $this->addLocation(
-                $message,
-                $node->getAttribute("startLine"),
-                $node,
-                ["domain" => "validators"]
-            );
+            $name = (string) $prop->name;
+            $annotations = $this->reader->getPropertyAnnotations(new \ReflectionProperty($class, $name));
+
+            foreach ($this->constraintMessageExtractor->extractMessages($annotations) as $message)
+            {
+                $this->addLocation(
+                    $message,
+                    $node->getAttribute("startLine"),
+                    $node,
+                    ["domain" => "validators"]
+                );
+            }
         }
     }
 
