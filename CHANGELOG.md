@@ -1,3 +1,9 @@
+1.4.0
+=====
+
+*   Add `NoMissingTranslationsTest`.
+
+
 1.3.0
 =====
 
