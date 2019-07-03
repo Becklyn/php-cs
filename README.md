@@ -96,6 +96,7 @@ Translations will be extracted from:
 *   Symfony: `$this->get('translator')->transChoice('foobar')` in controllers
 *   Symfony: `$this->addFlash()` and `$this->getFlashBag()->add()` in controllers
 *   Symfony: Form type choices
+*   Defaults messages from custom validation constraint message properties.
 
 
 #### Usage

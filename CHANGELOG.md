@@ -1,3 +1,9 @@
+1.5.0
+=====
+
+*   Added translation extractor for default messages in custom validation constraints.
+
+
 1.4.0
 =====
 

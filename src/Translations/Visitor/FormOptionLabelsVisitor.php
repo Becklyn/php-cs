@@ -3,6 +3,7 @@
 namespace Becklyn\PhpCs\Translations\Visitor;
 
 use Becklyn\PhpCs\Translations\Visitor\FormOptionsVisitor\ChildFormLabelsVisitor;
+use Becklyn\PhpCs\Translations\Visitor\Helper\ParserInteractionTrait;
 use PhpParser\Node;
 use PhpParser\NodeTraverser;
 use Symfony\Component\Form\AbstractType;
@@ -12,6 +13,8 @@ use Symfony\Component\Form\AbstractType;
  */
 class FormOptionLabelsVisitor extends AbstractVisitor
 {
+    use ParserInteractionTrait;
+
     /**
      * @inheritDoc
      */
@@ -58,19 +61,5 @@ class FormOptionLabelsVisitor extends AbstractVisitor
                 ["domain" => "form"]
             );
         }
-    }
-
-
-
-    /**
-     * @param Node\Stmt\Class_ $node
-     *
-     * @return string
-     */
-    private function getClassName (Node\Stmt\Class_ $node) : string
-    {
-        return \property_exists($node, "namespacedName")
-            ? (string) $node->namespacedName
-            : (string) $node->name;
     }
 }
