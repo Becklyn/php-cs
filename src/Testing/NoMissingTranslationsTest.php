@@ -12,7 +12,7 @@ class NoMissingTranslationsTest extends TestCase
     /**
      * Tests that there are no missing translations
      */
-    final public function testNoMissingTranslations ()
+    final public function testNoMissingTranslations () : void
     {
         $locales = $this->getLocales();
 
