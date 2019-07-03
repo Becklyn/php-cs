@@ -1,3 +1,9 @@
+1.6.0
+=====
+
+*   Added translation extractor for custom object constructor call parameters.
+
+
 1.5.0
 =====
 
