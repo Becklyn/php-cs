@@ -10,6 +10,8 @@ use Becklyn\PhpCs\Translations\Visitor\ConstructorParameterVisitor;
 use Becklyn\PhpCs\Translations\Visitor\CustomConstraintDefaultMessagesVisitor;
 use Becklyn\PhpCs\Translations\Visitor\FormOptionLabelsVisitor;
 use Becklyn\PhpCs\Translations\Visitor\PropertyValidationVisitor;
+use Symfony\Bridge\Twig\Extension\FormExtension;
+use Symfony\Bridge\Twig\Extension\TranslationExtension;
 use Symfony\Component\Finder\Finder;
 use Translation\Extractor\Extractor;
 use Translation\Extractor\FileExtractor\FileExtractor;
@@ -130,6 +132,10 @@ class TranslationExtractor
         $loader = new FilesystemLoader($dirs);
         $twig = new Environment($loader);
         $fileExtractor = new TwigFileExtractor($twig);
+
+        // register extensions
+        $twig->addExtension(new FormExtension());
+        $twig->addExtension(new TranslationExtension());
 
         // add visitors
         $fileExtractor->addVisitor(TwigVisitorFactory::create());
