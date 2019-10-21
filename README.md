@@ -128,6 +128,8 @@ There are several extension points:
     By default set to `[]`.
 *   `getRootDir(): string[]`: must return the absolute path to the root of your app. By default it assumes that your 
     test is directly in the tests directory top level. Change it, if that isn't the case.
+*   `registerTwigExtensions (Environment $twig): void`: extension point to register your own twig extensions
+    (or mock core extensions), so that the twig parser can successfully parse your templates.
 
 
 ##### Defining Ignored Keys

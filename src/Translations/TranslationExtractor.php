@@ -2,6 +2,7 @@
 
 namespace Becklyn\PhpCs\Translations;
 
+use Becklyn\PhpCs\Testing\NoMissingTranslationsTest;
 use Becklyn\PhpCs\Translations\Integration\NameResolverIntegration;
 use Becklyn\PhpCs\Translations\Visitor\BackendTranslatorVisitor;
 use Becklyn\PhpCs\Translations\Visitor\CallbackValidationVisitor;
@@ -29,6 +30,20 @@ use Twig\Loader\FilesystemLoader;
 
 class TranslationExtractor
 {
+    /**
+     * @var NoMissingTranslationsTest
+     */
+    private $test;
+
+
+    /**
+     * @param Environment $twig
+     */
+    public function __construct (NoMissingTranslationsTest $test)
+    {
+        $this->test = $test;
+    }
+
     /**
      * @param array $dirs
      *
@@ -136,6 +151,7 @@ class TranslationExtractor
         // register extensions
         $twig->addExtension(new FormExtension());
         $twig->addExtension(new TranslationExtension());
+        $this->test->registerTwigExtensions($twig);
 
         // add visitors
         $fileExtractor->addVisitor(TwigVisitorFactory::create());
