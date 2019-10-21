@@ -33,7 +33,7 @@ class ConstructorParameterVisitor extends AbstractVisitor
             return;
         }
 
-        $className = $node->class instanceof Node\Name\FullyQualified
+        $className = $node->class instanceof Node\Name
             ? $node->class->toString()
             : (string) $node->class->name;
 
