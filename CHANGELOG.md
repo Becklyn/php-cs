@@ -1,3 +1,11 @@
+1.6.0
+=====
+
+*   Improved supported symfony twig features by default, to easier test integration bundles.
+*   Add way to register custom twig extensions in `NoMissingTranslationsTest`.
+*   Fix variable access bug. 
+
+
 1.5.0
 =====
 

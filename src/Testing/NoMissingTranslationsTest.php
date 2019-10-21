@@ -6,6 +6,7 @@ use Becklyn\PhpCs\Translations\Diff\CatalogueDiffer;
 use Becklyn\PhpCs\Translations\Loader\TranslationsLoader;
 use Becklyn\PhpCs\Translations\TranslationExtractor;
 use PHPUnit\Framework\TestCase;
+use Twig\Environment;
 
 class NoMissingTranslationsTest extends TestCase
 {
@@ -16,7 +17,7 @@ class NoMissingTranslationsTest extends TestCase
     {
         $locales = $this->getLocales();
 
-        $extractor = new TranslationExtractor();
+        $extractor = new TranslationExtractor($this);
         $required = $extractor->extract($this->getDirectoriesWithUsages());
 
         $existingTranslationLoader = new TranslationsLoader();
@@ -102,5 +103,16 @@ class NoMissingTranslationsTest extends TestCase
     protected function getIgnoredKeys () : array
     {
         return [];
+    }
+
+
+    /**
+     * Registers all twig extensions
+     *
+     * @param Environment $twig
+     */
+    public function registerTwigExtensions (Environment $twig) : void
+    {
+
     }
 }
