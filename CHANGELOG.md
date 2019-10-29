@@ -1,3 +1,9 @@
+1.6.1
+=====
+
+*   Fix domain of extract translations from `LabeledEntityRemovalBlockedException` (it has to be `backend`).
+
+
 1.6.0
 =====
 
