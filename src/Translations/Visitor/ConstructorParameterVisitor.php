@@ -18,7 +18,7 @@ class ConstructorParameterVisitor extends AbstractVisitor
     private const LOCATIONS = [
         "Becklyn\\RadBundle\\Exception\\LabeledEntityRemovalBlockedException" => [
             "arg" => 2,
-            "domain" => "messages",
+            "domain" => "backend",
         ],
     ];
 
