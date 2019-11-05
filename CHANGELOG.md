@@ -1,7 +1,9 @@
-1.7.0
+2.0.0
 =====
 
+*   Moved the config files to new directories
 *   Correctly skip schema validation test, if there are no entities.
+*   Simplified and removed PhpStan config.
 
 
 1.6.2
