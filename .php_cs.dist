@@ -109,7 +109,6 @@ return PhpCsFixer\Config::create()
         "final_static_access" => true,
         "full_opening_tag" => true,
         "fully_qualified_strict_types" => true,
-        "function_declaration" => true,
         "function_to_constant" => true,
         "function_typehint_space" => true,
         "global_namespace_import" => [
@@ -149,7 +148,7 @@ return PhpCsFixer\Config::create()
         "native_function_type_declaration_casing" => true,
         "new_with_braces" => true,
         "no_alias_functions" => [
-            "sets" => "@all",
+            "sets" => ["@all"],
         ],
         "no_binary_string" => true,
         "no_blank_lines_after_class_opening" => true,
