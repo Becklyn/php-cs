@@ -13,9 +13,9 @@
     "require": {
         "php": "^7.1",
         "ext-json": "*",
-        "friendsofphp/php-cs-fixer": "^2.15",
-        "phpstan/phpstan": "^0.11.8",
-        "phpstan/phpstan-doctrine": "^0.11.5",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpstan/phpstan": "^0.11.19",
+        "phpstan/phpstan-doctrine": "^0.11.6",
         "phpstan/phpstan-symfony": "^0.11.6",
         "symfony/phpunit-bridge": "^4.0",
         "symfony/twig-bridge": "^4.3",
