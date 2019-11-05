@@ -1,3 +1,9 @@
+1.7.0
+=====
+
+*   Correctly skip schema validation test, if there are no entities.
+
+
 1.6.2
 =====
 

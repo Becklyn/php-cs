@@ -17,6 +17,14 @@ class SchemaValidationTest extends TestCase
      */
     final public function testSchemaIsValid () : void
     {
+        $entityDirs = \array_filter($this->getEntityDirs(), "is_dir");
+
+        if (empty($entityDirs))
+        {
+            self::markTestSkipped("No valid entity dirs found.");
+            return;
+        }
+
         $config = Setup::createAnnotationMetadataConfiguration(
             $this->getEntityDirs(),
             true,
