@@ -56,6 +56,6 @@ class BackendTranslatorVisitor extends AbstractVisitor
         return
             $method === (string) $node->name
             && $callerName === $caller
-            && ($callerNode instanceof Node\Expr\Variable || $callerNode instanceof Node\Expr\MethodCall);
+            && ($callerNode instanceof Node\Expr\Variable || $callerNode instanceof Node\Expr\PropertyFetch);
     }
 }
