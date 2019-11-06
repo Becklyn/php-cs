@@ -1,3 +1,10 @@
+1.6.2
+=====
+
+*   Adapted `BackendTranslatorVisitor` for the new `BackendTranslator::t()`.
+*   Extract correct argument for `BackendTranslator`.
+
+
 1.6.1
 =====
 

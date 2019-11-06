@@ -24,17 +24,13 @@ class BackendTranslatorVisitor extends AbstractVisitor
             return;
         }
 
-        $method = (string) $node->name;
-        $caller = $node->var;
-        $callerName = \property_exists($caller, "name") ? (string) $caller->name : '';
-
         if (
-            "trans" === $method
-            && $callerName === "backendTranslator"
-            && ($caller instanceof Node\Expr\Variable || $caller instanceof Node\Expr\MethodCall)
+            $this->isNamedCall($node, "backendTranslator", "trans")
+            || $this->isNamedCall($node, "backendTranslator", "t")
+            || $this->isNamedCall($node, "translator", "t")
         )
         {
-            if (null !== $label = $this->getStringArgument($node, 1))
+            if (null !== $label = $this->getStringArgument($node, 0))
             {
                 $this->addLocation(
                     $label,
@@ -44,5 +40,25 @@ class BackendTranslatorVisitor extends AbstractVisitor
                 );
             }
         }
+    }
+
+
+    /**
+     * @param Node\Expr\MethodCall $node
+     * @param string               $caller
+     * @param string               $method
+     *
+     * @return bool
+     */
+    private function isNamedCall (Node\Expr\MethodCall $node, string $caller, string $method) : bool
+    {
+        $callerNode = $node->var;
+        $callerName = \property_exists($callerNode, "name") ? (string) $callerNode->name : '';
+
+        return (
+            $method === (string) $node->name
+            && $callerName === $caller
+            && ($callerNode instanceof Node\Expr\Variable || $callerNode instanceof Node\Expr\MethodCall)
+        );
     }
 }
