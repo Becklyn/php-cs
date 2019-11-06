@@ -1,5 +1,5 @@
 includes:
-    - ../../phpstan/phpstan-doctrine/extension.neon
+    - ../../../phpstan/phpstan-doctrine/extension.neon
 
 parameters:
     level: 4
