@@ -15,25 +15,27 @@ class CustomConstraintDefaultMessagesVisitor extends AbstractVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function enterNode (Node $node)
     {
         if (!$node instanceof Node\Stmt\Class_)
         {
-            return;
+            return null;
         }
 
         $className = $this->getClassName($node);
 
         if ("" === $className)
         {
-            return;
+            return null;
         }
 
         // only act on constraints
         if (!\is_a($className, Constraint::class, true))
         {
-            return;
+            return null;
         }
 
         $class = new \ReflectionClass($className);
@@ -50,5 +52,7 @@ class CustomConstraintDefaultMessagesVisitor extends AbstractVisitor
                 );
             }
         }
+
+        return null;
     }
 }

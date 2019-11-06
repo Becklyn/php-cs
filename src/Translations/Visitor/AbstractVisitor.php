@@ -10,6 +10,8 @@ abstract class AbstractVisitor extends BasePHPVisitor implements NodeVisitor
 {
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function beforeTraverse (array $nodes)
     {
@@ -17,6 +19,8 @@ abstract class AbstractVisitor extends BasePHPVisitor implements NodeVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return int|Node|Node[]|void|null Replacement node (or special return value)
      */
     public function leaveNode (Node $node)
     {
@@ -25,6 +29,8 @@ abstract class AbstractVisitor extends BasePHPVisitor implements NodeVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function afterTraverse (array $nodes)
     {

@@ -9,13 +9,15 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Validates the doctrine schema
+ *
+ * @internal
  */
-class SchemaValidationTest extends TestCase
+final class SchemaValidationTest extends TestCase
 {
     /**
      * Tests that the Doctrine schema is valid
      */
-    final public function testSchemaIsValid () : void
+    public function testSchemaIsValid () : void
     {
         $entityDirs = \array_filter($this->getEntityDirs(), "is_dir");
 
@@ -58,8 +60,6 @@ class SchemaValidationTest extends TestCase
 
     /**
      * Returns the path to the root dir
-     *
-     * @return string
      */
     protected function getRootDir () : string
     {

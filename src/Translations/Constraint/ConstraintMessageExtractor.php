@@ -13,11 +13,13 @@ class ConstraintMessageExtractor
      * Adds all messages from all constraint annotations
      *
      * @param object[] $annotations
+     *
      * @return string[]
      */
     public function extractMessages (array $annotations) : array
     {
         $result = [];
+
         foreach ($annotations as $constraint)
         {
             if (!$constraint instanceof Constraint)
@@ -36,9 +38,7 @@ class ConstraintMessageExtractor
 
 
     /**
-     * @param Constraint $constraint
      *
-     * @return array
      */
     private function extractMessageKeysFromConstraint (Constraint $constraint) : array
     {
@@ -61,12 +61,6 @@ class ConstraintMessageExtractor
     /**
      * Extracts the message in the property from the constraint and adds it to the list,
      * if it is applicable and not empty.
-     *
-     * @param array      $list
-     * @param Constraint $constraint
-     * @param string     $property
-     *
-     * @return array
      */
     private function extract (array $list, Constraint $constraint, string $property) : array
     {
@@ -81,11 +75,6 @@ class ConstraintMessageExtractor
 
     /**
      * Checks whether the property was actually changed in the constraint
-     *
-     * @param Constraint $constraint
-     * @param string     $property
-     *
-     * @return bool
      */
     private function shouldAdd (Constraint $constraint, string $property) : bool
     {

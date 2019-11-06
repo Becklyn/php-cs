@@ -17,25 +17,27 @@ class FormOptionLabelsVisitor extends AbstractVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function enterNode (Node $node)
     {
         if (!$node instanceof Node\Stmt\Class_)
         {
-            return;
+            return null;
         }
 
         $className = $this->getClassName($node);
 
         if ("" === $className)
         {
-            return;
+            return null;
         }
 
         // only act on abstract types
         if (!\is_a($className, AbstractType::class, true))
         {
-            return;
+            return null;
         }
 
 
@@ -43,7 +45,7 @@ class FormOptionLabelsVisitor extends AbstractVisitor
 
         if (null === $buildFormMethod)
         {
-            return;
+            return null;
         }
 
         // traverse through form and fetch all options
@@ -61,5 +63,7 @@ class FormOptionLabelsVisitor extends AbstractVisitor
                 ["domain" => "form"]
             );
         }
+
+        return null;
     }
 }

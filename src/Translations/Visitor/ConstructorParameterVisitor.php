@@ -25,12 +25,14 @@ class ConstructorParameterVisitor extends AbstractVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function enterNode (Node $node)
     {
         if (!$node instanceof New_)
         {
-            return;
+            return null;
         }
 
         $className = $node->class instanceof Node\Name
@@ -56,14 +58,13 @@ class ConstructorParameterVisitor extends AbstractVisitor
                 );
             }
         }
+
+        return null;
     }
 
 
     /**
      * @param Arg[] $args
-     * @param int   $index
-     *
-     * @return string|null
      */
     private function parseArgAsString (array $args, int $index) : ?string
     {
