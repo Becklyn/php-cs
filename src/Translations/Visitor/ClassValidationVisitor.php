@@ -35,17 +35,19 @@ class ClassValidationVisitor extends AbstractVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function enterNode (Node $node)
     {
         if (!$node instanceof Node\Stmt\Class_)
         {
-            return;
+            return null;
         }
 
-        if (!\property_exists($node, "namespacedName") || (!\is_string($node->namespacedName) && !$node->namespacedName instanceof Node\Name))
+        if (!\property_exists($node, "namespacedName") || (!$node->namespacedName instanceof Node\Name))
         {
-            return;
+            return null;
         }
 
         $className = (string) $node->namespacedName;
@@ -60,5 +62,7 @@ class ClassValidationVisitor extends AbstractVisitor
                 ["domain" => "validators"]
             );
         }
+
+        return null;
     }
 }

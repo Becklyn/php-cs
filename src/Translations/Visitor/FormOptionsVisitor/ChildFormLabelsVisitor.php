@@ -23,12 +23,14 @@ class ChildFormLabelsVisitor implements NodeVisitor
     ];
 
     /**
-     * @var string[]
+     * @var array<string, true>
      */
     private $messages = [];
 
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function beforeTraverse (array $nodes)
     {
@@ -37,12 +39,14 @@ class ChildFormLabelsVisitor implements NodeVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function enterNode (Node $node)
     {
         if (!$node instanceof MethodCall)
         {
-            return;
+            return null;
         }
 
         $methodName = (string) $node->name;
@@ -50,7 +54,7 @@ class ChildFormLabelsVisitor implements NodeVisitor
 
         if ("add" !== $methodName || !\in_array($variableName, ["form", "builder"], true))
         {
-            return;
+            return null;
         }
 
         $options = $node->args[2] ?? null;
@@ -64,8 +68,6 @@ class ChildFormLabelsVisitor implements NodeVisitor
 
     /**
      * Fetches all messages out from the given array
-     *
-     * @param Array_ $options
      */
     private function collectMessages (Array_ $options) : void
     {
@@ -100,9 +102,7 @@ class ChildFormLabelsVisitor implements NodeVisitor
 
 
     /**
-     * @param Expr $expression
      *
-     * @return string|null
      */
     private function findVariableName (Expr $expression) : ?string
     {
@@ -122,6 +122,8 @@ class ChildFormLabelsVisitor implements NodeVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return int|Node|Node[]|void|null Replacement node (or special return value)
      */
     public function leaveNode (Node $node)
     {
@@ -130,6 +132,8 @@ class ChildFormLabelsVisitor implements NodeVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function afterTraverse (array $nodes)
     {

@@ -8,12 +8,15 @@ use Becklyn\PhpCs\Translations\TranslationExtractor;
 use PHPUnit\Framework\TestCase;
 use Twig\Environment;
 
-class NoMissingTranslationsTest extends TestCase
+/**
+ * @internal
+ */
+final class NoMissingTranslationsTest extends TestCase
 {
     /**
      * Tests that there are no missing translations
      */
-    final public function testNoMissingTranslations () : void
+    public function testNoMissingTranslations () : void
     {
         $locales = $this->getLocales();
 
@@ -38,8 +41,6 @@ class NoMissingTranslationsTest extends TestCase
 
     /**
      * Returns the locales to check for.
-     *
-     * @return array
      */
     protected function getLocales () : array
     {
@@ -49,8 +50,6 @@ class NoMissingTranslationsTest extends TestCase
 
     /**
      * Returns the directories from where the translations should be extracted.
-     *
-     * @return array
      */
     protected function getDirectoriesWithUsages () : array
     {
@@ -64,8 +63,6 @@ class NoMissingTranslationsTest extends TestCase
 
     /**
      * Returns the list of directories containing translation files.
-     *
-     * @return array
      */
     protected function getDirectoriesWithTranslations () : array
     {
@@ -79,8 +76,6 @@ class NoMissingTranslationsTest extends TestCase
 
     /**
      * Returns the path to the root dir.
-     *
-     * @return string
      */
     protected function getRootDir () : string
     {
@@ -97,8 +92,6 @@ class NoMissingTranslationsTest extends TestCase
      *  -> key: regular expression matching the key(s)
      *  -> value: true     -> ignore in every domain
      *            string[] -> ignore in these specific domains
-     *
-     * @return array
      */
     protected function getIgnoredKeys () : array
     {
@@ -108,8 +101,6 @@ class NoMissingTranslationsTest extends TestCase
 
     /**
      * Registers all twig extensions
-     *
-     * @param Environment $twig
      */
     public function registerTwigExtensions (Environment $twig) : void
     {

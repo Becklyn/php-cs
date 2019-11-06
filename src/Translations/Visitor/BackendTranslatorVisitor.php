@@ -11,17 +11,19 @@ class BackendTranslatorVisitor extends AbstractVisitor
 {
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function enterNode (Node $node)
     {
         if (!$node instanceof Node\Expr\MethodCall)
         {
-            return;
+            return null;
         }
 
-        if (!\is_string($node->name) && !$node->name instanceof Node\Identifier)
+        if (!$node->name instanceof Node\Identifier)
         {
-            return;
+            return null;
         }
 
         if (
@@ -44,21 +46,16 @@ class BackendTranslatorVisitor extends AbstractVisitor
 
 
     /**
-     * @param Node\Expr\MethodCall $node
-     * @param string               $caller
-     * @param string               $method
      *
-     * @return bool
      */
     private function isNamedCall (Node\Expr\MethodCall $node, string $caller, string $method) : bool
     {
         $callerNode = $node->var;
         $callerName = \property_exists($callerNode, "name") ? (string) $callerNode->name : '';
 
-        return (
+        return
             $method === (string) $node->name
             && $callerName === $caller
-            && ($callerNode instanceof Node\Expr\Variable || $callerNode instanceof Node\Expr\MethodCall)
-        );
+            && ($callerNode instanceof Node\Expr\Variable || $callerNode instanceof Node\Expr\PropertyFetch);
     }
 }

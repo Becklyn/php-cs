@@ -47,5 +47,10 @@
         "psr-4": {
             "Becklyn\\PhpCs\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Becklyn\\PhpCs\\": "tests/"
+        }
     }
 }

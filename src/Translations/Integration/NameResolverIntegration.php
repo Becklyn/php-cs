@@ -12,7 +12,7 @@ class NameResolverIntegration extends NameResolver implements Visitor
     /**
      * @inheritDoc
      */
-    public function init (SourceCollection $collection, SplFileInfo $file)
+    public function init (SourceCollection $collection, SplFileInfo $file) : void
     {
     }
 }

@@ -37,7 +37,6 @@ class TranslationExtractor
 
 
     /**
-     * @param Environment $twig
      */
     public function __construct (NoMissingTranslationsTest $test)
     {
@@ -45,8 +44,6 @@ class TranslationExtractor
     }
 
     /**
-     * @param array $dirs
-     *
      * @return string
      */
     public function extract (array $dirs) : array
@@ -74,12 +71,8 @@ class TranslationExtractor
 
     /**
      * Dedupes the messages
-     *
-     * @param array $domains
-     *
-     * @return array
      */
-    private function dedupeMessages (array $domains): array
+    private function dedupeMessages (array $domains) : array
     {
         $result = [];
 
@@ -109,9 +102,7 @@ class TranslationExtractor
 
 
     /**
-     * @param array $dirs
      *
-     * @return FileExtractor
      */
     private function createPhpExtractor () : FileExtractor
     {
@@ -138,8 +129,6 @@ class TranslationExtractor
 
 
     /**
-     * @param array $dirs
-     *
      * @return SourceCollection
      */
     private function createTwigExtractor (array $dirs) : FileExtractor
@@ -161,9 +150,7 @@ class TranslationExtractor
 
 
     /**
-     * @param array $dirs
      *
-     * @return Finder
      */
     private function createFinder (array $dirs) : Finder
     {

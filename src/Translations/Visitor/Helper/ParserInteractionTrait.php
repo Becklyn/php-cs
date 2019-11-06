@@ -7,9 +7,7 @@ use PhpParser\Node\Stmt\Class_;
 trait ParserInteractionTrait
 {
     /**
-     * @param Class_ $node
      *
-     * @return string
      */
     private function getClassName (Class_ $node) : string
     {

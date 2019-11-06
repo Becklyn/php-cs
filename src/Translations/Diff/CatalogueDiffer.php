@@ -8,10 +8,6 @@ namespace Becklyn\PhpCs\Translations\Diff;
 class CatalogueDiffer
 {
     /**
-     * @param array $locales
-     * @param array $requiredKeys
-     * @param array $existingTranslations
-     *
      * @return array
      */
     public function diff (
@@ -58,10 +54,7 @@ class CatalogueDiffer
 
 
     /**
-     * @param array  $ignores
-     * @param string $key
      *
-     * @return bool
      */
     private function isIgnored (array $ignores, string $domain, string $key) : bool
     {

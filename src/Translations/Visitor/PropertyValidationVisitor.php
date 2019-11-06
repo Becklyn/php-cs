@@ -42,24 +42,26 @@ class PropertyValidationVisitor extends AbstractVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function enterNode (Node $node)
     {
         if ($node instanceof ClassLike)
         {
-            if (!\property_exists($node, "namespacedName") || (!\is_string($node->namespacedName) && !$node->namespacedName instanceof Node\Name))
+            if (!\property_exists($node, "namespacedName") || (!$node->namespacedName instanceof Node\Name))
             {
                 $this->classStack[] = "?";
-                return;
+                return null;
             }
 
             $this->classStack[] = (string) $node->namespacedName;
-            return;
+            return null;
         }
 
         if (!$node instanceof Property)
         {
-            return;
+            return null;
         }
 
         $class = \end($this->classStack);
@@ -79,11 +81,15 @@ class PropertyValidationVisitor extends AbstractVisitor
                 );
             }
         }
+
+        return null;
     }
 
 
     /**
      * @inheritDoc
+     *
+     * @return int|Node|Node[]|void|null Replacement node (or special return value)
      */
     public function leaveNode (Node $node)
     {

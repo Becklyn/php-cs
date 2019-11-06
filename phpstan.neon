@@ -1,7 +1,0 @@
-includes:
-    - phpstan_lib.neon
-    - ../../phpstan/phpstan-symfony/extension.neon
-
-parameters:
-    symfony:
-        container_xml_path: %currentWorkingDirectory%/var/cache/dev/appDevDebugProjectContainer.xml

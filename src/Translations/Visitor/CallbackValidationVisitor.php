@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Context\ExecutionContext;
 use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 /**
- * Searches for methods that are annotated with @Callback.
+ * Searches for methods that are annotated with @Callback().
  *
  * Then tries to find a parameter that is typed ExecutionContext / ExecutionContextInterface and tries to find calls
  * to a method called "buildViolation" on it.
@@ -47,6 +47,8 @@ class CallbackValidationVisitor extends AbstractVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return Node[]|void|null Array of nodes
      */
     public function enterNode (Node $node)
     {
@@ -68,7 +70,6 @@ class CallbackValidationVisitor extends AbstractVisitor
 
 
     /**
-     * @param ClassLike $node
      */
     private function handleClassLike (ClassLike $node) : void
     {
@@ -79,7 +80,6 @@ class CallbackValidationVisitor extends AbstractVisitor
 
 
     /**
-     * @param ClassMethod $node
      */
     private function handleClassMethod (ClassMethod $node) : void
     {
@@ -103,7 +103,6 @@ class CallbackValidationVisitor extends AbstractVisitor
 
 
     /**
-     * @param MethodCall $node
      */
     private function handleMethodCall (MethodCall $node) : void
     {
@@ -139,8 +138,6 @@ class CallbackValidationVisitor extends AbstractVisitor
 
     /**
      * @param Node\Param[] $params
-     *
-     * @return string|null
      */
     private function findNameOfParameter (array $params) : ?string
     {
@@ -163,6 +160,8 @@ class CallbackValidationVisitor extends AbstractVisitor
 
     /**
      * @inheritDoc
+     *
+     * @return int|Node|Node[]|void|null Replacement node (or special return value)
      */
     public function leaveNode (Node $node)
     {

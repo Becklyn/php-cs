@@ -9,14 +9,24 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Validates the doctrine schema
+ *
+ * @internal
  */
-class SchemaValidationTest extends TestCase
+final class SchemaValidationTest extends TestCase
 {
     /**
      * Tests that the Doctrine schema is valid
      */
-    final public function testSchemaIsValid () : void
+    public function testSchemaIsValid () : void
     {
+        $entityDirs = \array_filter($this->getEntityDirs(), "is_dir");
+
+        if (empty($entityDirs))
+        {
+            self::markTestSkipped("No valid entity dirs found.");
+            return;
+        }
+
         $config = Setup::createAnnotationMetadataConfiguration(
             $this->getEntityDirs(),
             true,
@@ -50,8 +60,6 @@ class SchemaValidationTest extends TestCase
 
     /**
      * Returns the path to the root dir
-     *
-     * @return string
      */
     protected function getRootDir () : string
     {

@@ -10,11 +10,6 @@ class TranslationsLoader
 {
     /**
      * Loads all translations
-     *
-     * @param array $dirs
-     * @param array $locales
-     *
-     * @return array
      */
     public function loadTranslations (array $dirs, array $locales) : array
     {
