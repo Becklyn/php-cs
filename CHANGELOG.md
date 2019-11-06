@@ -1,3 +1,9 @@
+2.0.1
+=====
+
+*   Fixed testing classes to be `abstract` and not `final` anymore (thanks PHP-CS-Fixer...)
+
+
 2.0.0
 =====
 

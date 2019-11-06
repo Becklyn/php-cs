@@ -9,10 +9,8 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Validates the doctrine schema
- *
- * @internal
  */
-final class SchemaValidationTest extends TestCase
+abstract class SchemaValidationTest extends TestCase
 {
     /**
      * Tests that the Doctrine schema is valid

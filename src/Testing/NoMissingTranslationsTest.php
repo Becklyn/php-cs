@@ -9,9 +9,9 @@ use PHPUnit\Framework\TestCase;
 use Twig\Environment;
 
 /**
- * @internal
+ *
  */
-final class NoMissingTranslationsTest extends TestCase
+abstract class NoMissingTranslationsTest extends TestCase
 {
     /**
      * Tests that there are no missing translations
