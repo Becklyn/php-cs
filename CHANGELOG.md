@@ -1,3 +1,9 @@
+2.0.2
+=====
+
+*   Disable the `method_chaining_indentation` fixer (as it "fixes" some unintended cases)
+
+
 2.0.1
 =====
 
