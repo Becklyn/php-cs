@@ -1,3 +1,9 @@
+2.0.3
+=====
+
+*   Disable `mb_str_functions` fixer.
+
+
 2.0.2
 =====
 
