@@ -12,7 +12,11 @@
     ],
     "require": {
         "php": "^7.1",
-        "ext-json": "*"
+        "ext-json": "*",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpstan/phpstan": "^0.11.19",
+        "phpstan/phpstan-doctrine": "^0.11.6",
+        "phpstan/phpstan-symfony": "^0.11.6"
     },
     "config": {
         "sort-packages": true
@@ -20,11 +24,6 @@
     "autoload": {
         "psr-4": {
             "Becklyn\\PhpCs\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\Becklyn\\PhpCs\\": "tests/"
         }
     }
 }
