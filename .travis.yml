@@ -22,8 +22,7 @@ install:
 
 script:
     - composer normalize --indent-size 4 --indent-style space --dry-run
-    - php vendor/bin/php-cs-fixer fix --diff --config .php_cs.dist --dry-run --no-interaction
-    - ./vendor/bin/simple-phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml
+    # - ./vendor/bin/simple-phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml
 
 after_script:
-    - travis_retry php vendor/bin/php-coveralls
+    # - travis_retry php vendor/bin/php-coveralls
