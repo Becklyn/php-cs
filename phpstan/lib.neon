@@ -17,3 +17,4 @@ parameters:
     ignoreErrors:
         - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::#'
         - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface::#'
+        - '#\(Doctrine\\ORM\\EntityManager\) does not accept Doctrine\\Common\\Persistence\\ObjectManager#'
