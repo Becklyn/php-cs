@@ -12,33 +12,7 @@
     ],
     "require": {
         "php": "^7.1",
-        "ext-json": "*",
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "phpstan/phpstan": "^0.11.19",
-        "phpstan/phpstan-doctrine": "^0.11.6",
-        "phpstan/phpstan-symfony": "^0.11.6",
-        "symfony/phpunit-bridge": "^4.0",
-        "symfony/twig-bridge": "^4.3",
-        "symfony/yaml": "^4.0"
-    },
-    "require-dev": {
-        "ext-json": "*",
-        "doctrine/doctrine-bundle": "^1.11",
-        "doctrine/orm": "^2.6",
-        "php-translation/extractor": "^1.7",
-        "symfony/form": "^4.3",
-        "symfony/translation": "^4.3",
-        "symfony/validator": "^4.3",
-        "twig/twig": "^2.2"
-    },
-    "suggest": {
-        "doctrine/doctrine-bundle": "To use the translation extractor.",
-        "doctrine/orm": "To use the SchemaValidationTest.",
-        "php-translation/extractor": "To use the translation extractor.",
-        "symfony/form": "To use the translation extractor.",
-        "symfony/translation": "To use the translation extractor.",
-        "symfony/validator": "To use the translation extractor.",
-        "twig/twig": "To use the translation extractor."
+        "ext-json": "*"
     },
     "config": {
         "sort-packages": true
