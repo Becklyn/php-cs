@@ -5,18 +5,13 @@ PHP Code Style Checker
 Installation
 ------------
 
-```bash
-composer require --dev becklyn/php-cs 
-```
-
-You also need to install PHP-CS-Fixer via Phive:
+Installation should be done via the [composer-bin-plugin](https://github.com/bamarni/composer-bin-plugin).
 
 ```bash
-phive install php-cs-fixer
+composer bin test require --dev becklyn/php-cs 
 ```
 
 Now run your tools like this:
-
 
 Usage
 -----
@@ -24,7 +19,8 @@ Usage
 ### PHP CS Fixer
 
 ```bash
-php tools/php-cs-fixer fix --dry-run --diff --config vendor/becklyn/php-cs/.php_cs.dist
+./vendor/bin/php-cs-fixer fix --dry-run --diff --config vendor-bin/test/vendor/becklyn/php-cs/.php_cs.dist
+./vendor/bin/phpstan -c vendor-bin/test/vendor/becklyn/php-cs/phpstan/lib.neon
 ```
 
 ### Composer Normalize

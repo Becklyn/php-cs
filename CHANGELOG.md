@@ -1,3 +1,15 @@
+3.0.2
+=====
+
+*   Readded PHPStan + PHP-CS-Fixer.
+
+
+3.0.1 (= 3.0.0)
+===============
+
+*   Remove bundled code.
+
+
 2.0.3
 =====
 
