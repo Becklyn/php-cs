@@ -1,3 +1,9 @@
+3.0.3
+=====
+
+*   Also ignore `vendor-bin` in PHPStan.
+
+
 3.0.2
 =====
 

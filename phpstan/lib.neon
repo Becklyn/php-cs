@@ -13,6 +13,7 @@ parameters:
         - %currentWorkingDirectory%/tests
         - %currentWorkingDirectory%/var
         - %currentWorkingDirectory%/vendor
+        - %currentWorkingDirectory%/vendor-bin
 
     ignoreErrors:
         - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::#'
