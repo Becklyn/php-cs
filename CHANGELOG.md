@@ -1,3 +1,9 @@
+3.0.4
+=====
+
+*   (improvement) Bump to newest `PHPStan` version.
+
+
 3.0.3
 =====
 
