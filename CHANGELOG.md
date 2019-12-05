@@ -1,3 +1,9 @@
+3.0.5
+=====
+
+*   (improvement) Bump default PHPStan level to `6`.
+
+
 3.0.4
 =====
 
