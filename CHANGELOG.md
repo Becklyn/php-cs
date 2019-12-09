@@ -1,3 +1,9 @@
+3.0.6
+=====
+
+*   (improvement) Drop default PHPStan level to `5`, otherwise we have a huge list of questionable results.
+
+
 3.0.5
 =====
 
