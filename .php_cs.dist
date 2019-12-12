@@ -91,9 +91,6 @@ return PhpCsFixer\Config::create()
         "declare_strict_types" => true,
         "dir_constant" => true,
         "doctrine_annotation_array_assignment" => true,
-        "doctrine_annotation_braces" => [
-            "syntax" => "with_braces",
-        ],
         "elseif" => true,
         "encoding" => true,
         "ereg_to_preg" => true,

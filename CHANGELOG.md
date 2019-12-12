@@ -1,3 +1,9 @@
+3.0.7
+=====
+
+*   (improvement) Disable the PHP-CS-Fixer `doctrine_annotation_braces` rule, as it has too many false-positives.
+
+
 3.0.6
 =====
 
