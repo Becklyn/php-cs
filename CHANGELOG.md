@@ -1,3 +1,9 @@
+3.0.10
+======
+
+*   (bug) Fix include path in Symfony preset for PhpStan
+
+
 3.0.9
 =====
 
