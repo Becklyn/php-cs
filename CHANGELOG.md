@@ -1,3 +1,9 @@
+3.0.9
+=====
+
+*   (improvement) Extend ignore errors list in PhpStan with new doctrine namespaces
+
+
 3.0.8
 =====
 
