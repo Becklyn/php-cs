@@ -1,3 +1,9 @@
+3.0.8
+=====
+
+*   (improvement) enable `inferPrivatePropertyTypeFromConstructor` in PhpStan
+
+
 3.0.7
 =====
 
