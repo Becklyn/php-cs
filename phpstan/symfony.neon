@@ -1,6 +1,6 @@
 includes:
     - lib.neon
-    - ../../phpstan/phpstan-symfony/extension.neon
+    - ../../../phpstan/phpstan-symfony/extension.neon
 
 parameters:
     symfony:
