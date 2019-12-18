@@ -4,6 +4,7 @@ includes:
 parameters:
     level: 5
 
+    inferPrivatePropertyTypeFromConstructor: true
     reportUnmatchedIgnoredErrors: false
 
     excludes_analyse:
