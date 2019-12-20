@@ -2,6 +2,7 @@
 ======
 
 *   (bug) Fix include path in Symfony preset for PhpStan
+*   (improvement) update path to symfony container in PhpStan config.
 
 
 3.0.9
