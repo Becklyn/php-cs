@@ -1,3 +1,9 @@
+3.0.12
+======
+
+*   (improvement) PHP-CS-Fixer: allow single line PHPDoc comments.
+
+
 3.0.11
 ======
 
