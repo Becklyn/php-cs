@@ -227,7 +227,6 @@ return PhpCsFixer\Config::create()
         "protected_to_private" => true,
         "psr4" => true,
         "random_api_migration" => true,
-        "return_assignment" => true,
         "return_type_declaration" => [
             "space_before" => "one",
         ],

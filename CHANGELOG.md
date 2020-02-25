@@ -1,3 +1,9 @@
+3.0.13
+======
+
+*   (improvement) Allow "obsolete" variables in PHP (as they are often used for type doc "casting").
+
+
 3.0.12
 ======
 
