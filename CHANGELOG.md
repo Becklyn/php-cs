@@ -1,3 +1,9 @@
+4
+=
+
+*   (improvement) Also include `vendor-bin`.
+
+
 3.0.13
 ======
 

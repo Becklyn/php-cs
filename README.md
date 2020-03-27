@@ -26,3 +26,9 @@ Usage
 ### Composer Normalize
 
 Composer normalize needs the [composer `normalize` plugin](https://packagist.org/packages/localheinz/composer-normalize).
+
+
+Versioning
+==========
+
+This package doesn't use semantic versioning, but it always releases a major version.
