@@ -1,3 +1,9 @@
+5
+=
+
+*   (improvement) Don't treat PHPDoc types as certain in PhpStan.
+
+
 4
 =
 
