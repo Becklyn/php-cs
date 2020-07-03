@@ -84,7 +84,6 @@ return PhpCsFixer\Config::create()
             "spacing" => "one",
         ],
         "constant_case" => true,
-        "date_time_immutable" => true,
         "declare_equal_normalize" => [
             "space" => "none",
         ],

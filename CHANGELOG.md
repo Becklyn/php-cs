@@ -1,3 +1,10 @@
+7
+=
+
+*   (improvement) Don't fix `date_time_immutable`.
+    It's important for older code bases + should be "fixed" by default in newer ones.
+
+
 6
 =
 
