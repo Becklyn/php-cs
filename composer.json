@@ -13,10 +13,10 @@
     "require": {
         "php": "^7.1",
         "ext-json": "*",
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "phpstan/phpstan": "^0.12",
-        "phpstan/phpstan-doctrine": "^0.12",
-        "phpstan/phpstan-symfony": "^0.12"
+        "friendsofphp/php-cs-fixer": "^v2.16.4",
+        "phpstan/phpstan": "^0.12.32",
+        "phpstan/phpstan-doctrine": "^0.12.17",
+        "phpstan/phpstan-symfony": "^0.12.6"
     },
     "config": {
         "sort-packages": true
