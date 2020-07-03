@@ -32,3 +32,12 @@ Versioning
 ==========
 
 This package doesn't use semantic versioning, but it always releases a major version.
+
+
+Main Branch Naming
+==================
+
+Normally, in Becklyn's repositories, we use versioned branches (`1.x`, `2.x`), but here it doesn't make sense
+as every update implies a new major version.
+
+So the main branch is just called `release`, as that's where all releases are coming from.
