@@ -1,3 +1,10 @@
+8
+=
+
+*   (improvement) Update PHPStan.
+*   (improvement) Require all typed properties to be initialized.
+
+
 7
 =
 

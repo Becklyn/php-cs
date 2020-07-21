@@ -4,6 +4,7 @@ includes:
 parameters:
     level: 5
 
+    checkUninitializedProperties: true
     inferPrivatePropertyTypeFromConstructor: true
     reportUnmatchedIgnoredErrors: false
     treatPhpDocTypesAsCertain: false
