@@ -5,3 +5,5 @@ includes:
 parameters:
     symfony:
         container_xml_path: %currentWorkingDirectory%/var/cache/dev/App_KernelDevDebugContainer.xml
+
+    tmpDir: ../.phpstan-cache

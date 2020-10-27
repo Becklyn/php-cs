@@ -23,3 +23,5 @@ parameters:
         - '#Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface::#'
         - '#\(Doctrine\\ORM\\EntityManager\) does not accept Doctrine\\Common\\Persistence\\ObjectManager#'
         - '#\(Doctrine\\ORM\\EntityManager\) does not accept Doctrine\\Persistence\\ObjectManager#'
+
+    tmpDir: ../.phpstan-cache

@@ -1,3 +1,9 @@
+9
+=
+
+*   (improvement) Make PhpStan's cache directory more predictable. This also fixes errors in CI environments.
+
+
 8
 =
 
