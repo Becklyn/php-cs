@@ -25,6 +25,7 @@ else
 $finder = PhpCsFixer\Finder::create()
     ->in($dirs)
     ->exclude(["Migrations", "node_modules", "tests", "var", "vendor", "vendor-bin"])
+    ->notPath("bundles.php")
     ->ignoreUnreadableDirs()
 ;
 
