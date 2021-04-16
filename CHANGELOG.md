@@ -1,3 +1,9 @@
+11
+==
+
+*   (improvement) Update PHPStan to `0.12.83` and PhpCsFixer to `v2.18.5`.
+
+
 10
 ==
 

@@ -13,8 +13,8 @@
     "require": {
         "php": "^7.1",
         "ext-json": "*",
-        "friendsofphp/php-cs-fixer": "^v2.16.4",
-        "phpstan/phpstan": "^0.12.33",
+        "friendsofphp/php-cs-fixer": "^v2.18.5",
+        "phpstan/phpstan": "^0.12.83",
         "phpstan/phpstan-doctrine": "^0.12.17",
         "phpstan/phpstan-symfony": "^0.12.6"
     },
