@@ -1,3 +1,10 @@
+12
+==
+
+*   (improvement) Add support for PHP 8.x.
+*   (improvement) Update PHPStan to `0.12.91` and PhpCsFixer to `v3.0.0`.
+
+
 11
 ==
 

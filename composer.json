@@ -11,12 +11,12 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.1 || ^8.0",
         "ext-json": "*",
-        "friendsofphp/php-cs-fixer": "^v2.18.5",
-        "phpstan/phpstan": "^0.12.83",
-        "phpstan/phpstan-doctrine": "^0.12.17",
-        "phpstan/phpstan-symfony": "^0.12.6"
+        "friendsofphp/php-cs-fixer": "^v3.0",
+        "phpstan/phpstan": "^0.12.91",
+        "phpstan/phpstan-doctrine": "^0.12.41",
+        "phpstan/phpstan-symfony": "^0.12.38"
     },
     "config": {
         "sort-packages": true

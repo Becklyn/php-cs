@@ -29,7 +29,7 @@ $finder = PhpCsFixer\Finder::create()
     ->ignoreUnreadableDirs()
 ;
 
-return PhpCsFixer\Config::create()
+return (new PhpCsFixer\Config())
     ->setFinder($finder)
     ->setRiskyAllowed(true)
     ->setRules([
@@ -103,7 +103,6 @@ return PhpCsFixer\Config::create()
         "explicit_indirect_variable" => true,
         "explicit_string_variable" => true,
         "final_internal_class" => true,
-        "final_static_access" => true,
         "full_opening_tag" => true,
         "fully_qualified_strict_types" => true,
         "function_to_constant" => true,
@@ -125,7 +124,6 @@ return PhpCsFixer\Config::create()
         ],
         "logical_operators" => true,
         "lowercase_cast" => true,
-        "lowercase_constants" => true,
         "lowercase_keywords" => true,
         "lowercase_static_reference" => true,
         "magic_constant_casing" => true,
@@ -196,7 +194,6 @@ return PhpCsFixer\Config::create()
         "php_unit_mock" => true,
         "php_unit_namespaced" => true,
         "php_unit_no_expectation_annotation" => true,
-        "php_unit_ordered_covers" => true,
         "php_unit_set_up_tear_down_visibility" => true,
         "php_unit_strict" => true,
         "php_unit_test_case_static_method_calls" => [
@@ -224,7 +221,6 @@ return PhpCsFixer\Config::create()
         "phpdoc_var_without_name" => true,
         "pow_to_exponentiation" => true,
         "protected_to_private" => true,
-        "psr4" => true,
         "random_api_migration" => true,
         "return_type_declaration" => [
             "space_before" => "one",
@@ -252,7 +248,7 @@ return PhpCsFixer\Config::create()
         "switch_case_space" => true,
         "ternary_operator_spaces" => true,
         "ternary_to_null_coalescing" => true,
-        "trailing_comma_in_multiline_array" => true,
+        "trailing_comma_in_multiline" => true,
         "trim_array_spaces" => true,
         "unary_operator_spaces" => true,
         "visibility_required" => true,

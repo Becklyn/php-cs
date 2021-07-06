@@ -19,7 +19,7 @@ Usage
 ### PHP CS Fixer
 
 ```bash
-./vendor/bin/php-cs-fixer fix --dry-run --diff --config vendor-bin/test/vendor/becklyn/php-cs/.php_cs.dist
+./vendor/bin/php-cs-fixer fix --dry-run --diff --config vendor-bin/test/vendor/becklyn/php-cs/.php_cs.dist.php
 ./vendor/bin/phpstan -c vendor-bin/test/vendor/becklyn/php-cs/phpstan/lib.neon
 ```
 
