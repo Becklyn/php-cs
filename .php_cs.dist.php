@@ -84,7 +84,9 @@ return (new PhpCsFixer\Config())
         "concat_space" => [
             "spacing" => "one",
         ],
-        "constant_case" => true,
+        "constant_case" => [
+            "case" => "lower",
+        ],
         "declare_equal_normalize" => [
             "space" => "none",
         ],
@@ -137,7 +139,9 @@ return (new PhpCsFixer\Config())
         "multiline_whitespace_before_semicolons" => true,
         "native_constant_invocation" => true,
         "native_function_casing" => true,
-        "native_function_invocation" => true,
+        "native_function_invocation" => [
+            "include" => ["@all"],
+        ],
         "native_function_type_declaration_casing" => true,
         "new_with_braces" => true,
         "no_alias_functions" => [
@@ -193,6 +197,9 @@ return (new PhpCsFixer\Config())
         "php_unit_method_casing" => true,
         "php_unit_mock" => true,
         "php_unit_namespaced" => true,
+        "phpdoc_order_by_value" => [
+            "annotations" => ["covers"],
+        ],
         "php_unit_no_expectation_annotation" => true,
         "php_unit_set_up_tear_down_visibility" => true,
         "php_unit_strict" => true,
@@ -221,6 +228,7 @@ return (new PhpCsFixer\Config())
         "phpdoc_var_without_name" => true,
         "pow_to_exponentiation" => true,
         "protected_to_private" => true,
+        "psr_autoloading" => true,
         "random_api_migration" => true,
         "return_type_declaration" => [
             "space_before" => "one",

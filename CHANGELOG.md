@@ -1,3 +1,11 @@
+13
+==
+
+*   (bug) Add missing defaults that have been changed with upgrade of PhpCsFixer to `v3.0.0` back to the previous config.
+*   (bc) The previous released version `12` included a BC where the `.php_cs.dist` file has been renamed to `.php_cs.dist.php`,
+    which we have missed during review. Please see `UPGRAE.md` for more information.
+
+
 12
 ==
 
