@@ -1,3 +1,15 @@
+14
+==
+
+*   (improvement) PhpCsFixer will no longer change the `==` operator into `===`. PHPStan now marks usages of `==` as errors,
+    but in the few cases where such usage is valid, it can be overridden with a comment in the code. 
+*   (improvement) Classes ending in `Test` will no longer be marked final by PhpCsFixer. This was applied through a rule 
+    intended for use only on PHPUnit test classes, but it was applied to any and all classes ending with `Test`, even
+    in `src`.
+*   (improvement) PhpCsFixer will no longer replace PHPUnit `assertEquals` calls with `assertSame` , which works differently
+    on objects.
+
+
 13
 ==
 
