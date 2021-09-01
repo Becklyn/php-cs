@@ -1,6 +1,12 @@
 includes:
     - ../../../phpstan/phpstan-doctrine/extension.neon
 
+services:
+    -
+        class: Becklyn\PhpCs\Stan\EqualOperatorShouldNotBeUsedRule
+        tags:
+            - phpstan.rules.rule
+
 parameters:
     level: 5
 
