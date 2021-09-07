@@ -23,7 +23,7 @@ class EqualOperatorShouldNotBeUsedRule implements Rule
     public function processNode(Node $node, Scope $scope) : array
     {
         return [
-            RuleErrorBuilder::message("The 'equal' operator ('==') should only be used in special cases like comparing arrays or data transfer objects for their values. Otherwise, the 'identical' operator ('===') should be used instead.")->build(),
+            RuleErrorBuilder::message("The 'equal' operator ('==') should only be used in special cases like comparing data transfer objects for their values. Otherwise, the 'identical' operator ('===') should be used instead.")->build(),
         ];
     }
 }
