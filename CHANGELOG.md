@@ -1,7 +1,7 @@
 15
 ==
 
-*   (improvements) Upgrade to PhpStan v1.0.
+*   (improvement) Upgrade to PhpStan v1.0.
 *   (internal) Replace TravisCI with CircleCI
 *   (internal) Update GitHub Code Owners.
 
