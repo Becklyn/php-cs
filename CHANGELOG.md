@@ -2,6 +2,7 @@
 ==
 
 *   (improvements) Upgrade to PhpStan v1.0.
+*   (internal) Replace TravisCI with CircleCI
 14
 ==
 
