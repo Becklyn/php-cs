@@ -1,0 +1,31 @@
+version: 2
+
+jobs:
+    php:
+        docker:
+            - image: becklyn/circleci-php7.4:latest
+
+        steps:
+            - checkout
+
+            - run:
+                  name: Composer Install
+                  command: COMPOSER_MEMORY_LIMIT=-1 composer install --no-interaction --prefer-dist --no-progress --no-suggest
+            - run:
+                  name: Install Composer Normalize
+                  command: COMPOSER_MEMORY_LIMIT=-1 composer global require localheinz/composer-normalize --no-interaction --prefer-dist --no-progress --no-suggest
+
+
+            # RUN
+            - run:
+                  name: Composer Normalize
+                  command: COMPOSER_MEMORY_LIMIT=-1 composer normalize --indent-size 4 --indent-style space --dry-run
+            - run:
+                  name: PHP CS Fixer
+                  command: ./vendor/bin/php-cs-fixer fix --diff --config ./.php_cs.dist.php --dry-run --no-interaction
+
+workflows:
+    version: 2
+    all:
+        jobs:
+            - php
