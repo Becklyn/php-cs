@@ -15,7 +15,7 @@ parameters:
     reportUnmatchedIgnoredErrors: false
     treatPhpDocTypesAsCertain: false
 
-    excludes_analyse:
+    excludePaths:
         - %currentWorkingDirectory%/app/DoctrineMigrations
         - %currentWorkingDirectory%/node_modules
         - %currentWorkingDirectory%/src/Migrations

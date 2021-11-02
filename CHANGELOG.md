@@ -1,3 +1,9 @@
+vNext
+=====
+
+*   (internal) Fix using deprecated option `excludes_analyse` in our PhpStan `lib.neon` configuration.
+
+
 15
 ==
 
