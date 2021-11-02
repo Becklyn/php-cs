@@ -15,11 +15,18 @@ use PHPStan\Rules\RuleErrorBuilder;
  */
 class EqualOperatorShouldNotBeUsedRule implements Rule
 {
+    /**
+     * @inheritdoc
+     */
     public function getNodeType() : string
     {
         return Equal::class;
     }
 
+
+    /**
+     * @inheritdoc
+     */
     public function processNode(Node $node, Scope $scope) : array
     {
         return [

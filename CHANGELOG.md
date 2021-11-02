@@ -1,3 +1,7 @@
+15
+==
+
+*   (improvements) Upgrade to PhpStan v1.0.
 14
 ==
 
