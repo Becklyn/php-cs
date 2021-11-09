@@ -1,7 +1,8 @@
-vNext
-=====
+16
+==
 
 *   (internal) Fix using deprecated option `excludes_analyse` in our PhpStan `lib.neon` configuration.
+*   (internal) At least require PHP 7.4 and allow support for all PHP 8 versions.
 
 
 15
