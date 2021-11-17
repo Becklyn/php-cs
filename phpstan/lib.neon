@@ -6,6 +6,10 @@ services:
         class: Becklyn\PhpCs\Stan\EqualOperatorShouldNotBeUsedRule
         tags:
             - phpstan.rules.rule
+    -
+        class: Becklyn\PhpCs\Stan\IgnoreUnusedClassConstantsExtension
+        tags:
+            - phpstan.constants.alwaysUsedClassConstantsExtension
 
 parameters:
     level: 5

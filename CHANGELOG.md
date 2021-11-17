@@ -2,6 +2,7 @@
 ==
 
 *   (internal) Upgrade dependencies to their latest version.
+*   (improvement) Ignore PhpStan errors about un-used constants.
 
 
 16
