@@ -1,15 +1,15 @@
 {
     "name": "becklyn/php-cs",
-    "type": "lib",
     "description": "Config files for PHP code style",
-    "homepage": "https://github.com/Becklyn/PHP-Code-Style",
     "license": "BSD-3-Clause",
+    "type": "lib",
     "authors": [
         {
             "name": "Becklyn Studios",
             "homepage": "http://becklyn.com/"
         }
     ],
+    "homepage": "https://github.com/Becklyn/PHP-Code-Style",
     "require": {
         "php": ">=7.4",
         "ext-json": "*",
@@ -18,12 +18,12 @@
         "phpstan/phpstan-doctrine": "^1.2.10",
         "phpstan/phpstan-symfony": "^1.1.5"
     },
-    "config": {
-        "sort-packages": true
-    },
     "autoload": {
         "psr-4": {
             "Becklyn\\PhpCs\\": "src/"
         }
+    },
+    "config": {
+        "sort-packages": true
     }
 }
