@@ -11,7 +11,7 @@
     ],
     "homepage": "https://github.com/Becklyn/PHP-Code-Style",
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.1",
         "ext-json": "*",
         "friendsofphp/php-cs-fixer": "^v3.6.0",
         "phpstan/phpstan": "^1.4.6",
